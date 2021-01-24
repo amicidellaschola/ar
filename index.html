@@ -91,63 +91,70 @@
       ></a-camera>
       <a-box color="yellow" gps-entity-place="latitude: 45.8222430496054; longitude: 8.767731449170162" position="0 30 0"/>
     </a-scene> -->
-    <a-scene
+
+    <!-- <a-scene
       embedded
       arjs='videoTexture: true; debugUIEnabled: false;'
+      renderer='antialias: true; alpha: true'
+    > -->
+    <a-scene
+      embedded
+      arjs='debugUIEnabled: false;'
       renderer='antialias: true; alpha: true'
     >
       <a-camera 
         gps-camera 
         rotation-reader 
         gps-camera-position 
-        gps-camera-rotation gps-camera-debug
+        gps-camera-rotation
+        gps-camera-debug
       ></a-camera>
+      <!-- data-place="olmo" -->
       <a-box
-        data-place="olmo"
         gps-entity-place="latitude: 45.82197; longitude: 8.76832;"
         material='color: blue'
         scale='300 300 300'
       ></a-box>
+      <!-- data-place="stagno-out-north" -->
       <a-sphere
-        data-place="stagno-out-north"
         gps-entity-place="latitude: 45.82181; longitude: 8.76792;"
         radius="150"
         color="yellow"
       ></a-sphere>
+      <!-- data-place="aiuola-fiori" -->
       <a-sphere
-        data-place="aiuola-fiori"
         gps-entity-place="latitude: 45.82185; longitude: 8.76774;"
         radius="50"
         color="green"
       ></a-sphere>
+      <!-- data-place="falò" -->
       <a-box
-        data-place="falò"
         gps-entity-place="latitude: 45.82205; longitude: 8.76739;"
         material='color: red'
         look-at="[gps-camera]"
         scale='100 100 100'
       ></a-box>
+      <!-- data-place="pollaio" -->
       <a-sphere
-        data-place="pollaio"
         gps-entity-place="latitude: 45.82213; longitude: 8.76712;"
         radius="300"
         color="black"
       ></a-sphere>
+      <!-- data-place="spirale-aromatiche" -->
       <a-text
-        data-place="spirale-aromatiche"
         gps-entity-place="latitude: 45.82216; longitude: 8.76726;"
         value="Spirale aromatiche"
         look-at="[gps-camera]"
         scale="500 500 40"
       ></a-text>
+      <!-- data-place="ingresso-davanti-siepe" -->
       <a-text
-        data-place="ingresso-davanti-siepe"
         gps-entity-place="latitude: 45.82224; longitude: 8.76751;"
         value="LaSchola"
         scale="200 200 200"
-        ></a-text>
+      ></a-text>
+      <!-- data-place="prato-biblioteca" -->
       <a-text
-        data-place="prato-biblioteca"
         gps-entity-place="latitude: 45.82208; longitude: 8.76809;"
         value="Bihospitalis"
         look-at="[gps-camera]"
