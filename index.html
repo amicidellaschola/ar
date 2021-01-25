@@ -98,10 +98,16 @@
       renderer='antialias: true; alpha: true'
     > -->
     <a-scene
-      embedded
       arjs='debugUIEnabled: false;'
+      vr-mode-ui="enabled: true"
       renderer='antialias: true; alpha: true'
+      stats
     >
+    <!-- Other a-scene attrs:
+      fog="type: linear; color: #AAA"
+      debug
+    -->
+
       <a-camera 
         gps-camera 
         rotation-reader 
@@ -109,11 +115,26 @@
         gps-camera-rotation
         gps-camera-debug
       ></a-camera>
+      <!-- Other a-camera attrs:
+        position="0 1.6 0"
+      -->
+
+      <!-- Animation rotation loop -->
+      <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+        <a-box
+          gps-entity-place="latitude: 45.82197; longitude: 8.76832;"
+          material='color: blue'
+          scale='3 3 3'
+        ></a-box>
+      </a-entity>
+
+
       <!-- data-place="olmo" -->
       <a-box
         gps-entity-place="latitude: 45.82197; longitude: 8.76832;"
         material='color: blue'
-        scale='300 300 300'
+        scale='4 4 4'
+        depth="2" height="4" width="3"
       ></a-box>
       <!-- data-place="stagno-out-north" -->
       <a-sphere
@@ -132,7 +153,7 @@
         gps-entity-place="latitude: 45.82205; longitude: 8.76739;"
         material='color: red'
         look-at="[gps-camera]"
-        scale='100 100 100'
+        scale='1 1 1'
       ></a-box>
       <!-- data-place="pollaio" -->
       <a-sphere
@@ -145,20 +166,20 @@
         gps-entity-place="latitude: 45.82216; longitude: 8.76726;"
         value="Spirale aromatiche"
         look-at="[gps-camera]"
-        scale="500 500 40"
+        scale="5 5 4"
       ></a-text>
       <!-- data-place="ingresso-davanti-siepe" -->
       <a-text
         gps-entity-place="latitude: 45.82224; longitude: 8.76751;"
         value="LaSchola"
-        scale="200 200 200"
+        scale="2 2 2"
       ></a-text>
       <!-- data-place="prato-biblioteca" -->
       <a-text
         gps-entity-place="latitude: 45.82208; longitude: 8.76809;"
         value="Bihospitalis"
         look-at="[gps-camera]"
-        scale="300 300 150"
+        scale="3 3 1"
       ></a-text>
       <!-- <a-sphere gps-entity-place="latitude: 45.824416899999996; longitude: 8.772914799999999;" radius=2 color=green></a-sphere> -->
     </a-scene>
